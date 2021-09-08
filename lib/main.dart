@@ -1,3 +1,6 @@
+import 'package:chit_chat/screens/chat_screen.dart';
+import 'package:chit_chat/screens/login_screen.dart';
+import 'package:chit_chat/screens/registration_screen.dart';
 import 'package:chit_chat/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -8,8 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: WelcomeScreen(),
+    return MaterialApp(
+      initialRoute: WelcomeScreen.id,
+      routes: {
+        WelcomeScreen.id: (context) => const WelcomeScreen(),
+        ChatScreen.id: (context) => const ChatScreen(),
+        LoginScreen.id: (context) => const LoginScreen(),
+        RegistrationScreen.id: (context) => const RegistrationScreen(),
+      },
     );
   }
 }
