@@ -1,4 +1,5 @@
 import 'package:chit_chat/screens/registration_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'login_screen.dart';
@@ -23,9 +24,28 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            SizedBox(
-              child: Image.asset('images/chat_logo.png'),
-              height: 150.0,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Hero(
+                  tag: 'logo',
+                  child: SizedBox(
+                    child: Image.asset('images/chat_logo.png'),
+                    height: 60.0,
+                  ),
+                ),
+                const SizedBox(
+                  width: 15.0,
+                ),
+                const Text(
+                  'Chit Chat',
+                  style: TextStyle(
+                    fontSize: 50.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueGrey,
+                  ),
+                ),
+              ],
             ),
             const SizedBox(
               height: 50.0,
