@@ -29,14 +29,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     controller.forward();
 
     controller.addListener(() {
-      print(controller.value);
+      setState(() {
+        print(controller.value);
+      });
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.red.withOpacity(controller.value),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
