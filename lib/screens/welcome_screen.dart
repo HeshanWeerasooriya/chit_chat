@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:chit_chat/screens/registration_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -66,9 +67,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 const SizedBox(
                   width: 15.0,
                 ),
-                const Text(
-                  'Chit Chat',
-                  style: TextStyle(
+                TypewriterAnimatedTextKit(
+                  text: ['Chit Chat'],
+                  textStyle: TextStyle(
                     fontSize: 50.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.blueGrey,
