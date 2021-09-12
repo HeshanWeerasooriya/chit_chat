@@ -1,0 +1,40 @@
+ {
+  "project_info": {
+    "project_number": "778844907996",
+    "firebase_url": "https://list-49775-default-rtdb.firebaseio.com",
+    "project_id": "list-49775",
+    "storage_bucket": "list-49775.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778844907996:android:2bd0b46132b1f4ce684719",
+        "android_client_info": {
+          "package_name": "com.heshan.chit_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778844907996-pm3veqkalagqrmmj3rnv4t1fv21v5s0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1EwQRNondBh9fqHR8asSF2G1RR6PyPLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778844907996-pm3veqkalagqrmmj3rnv4t1fv21v5s0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
