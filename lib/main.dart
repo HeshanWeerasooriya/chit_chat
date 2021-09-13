@@ -1,4 +1,5 @@
 import 'package:chit_chat/screens/chat_screen.dart';
+import 'package:chit_chat/screens/loading_screen.dart';
 import 'package:chit_chat/screens/login_screen.dart';
 import 'package:chit_chat/screens/registration_screen.dart';
 import 'package:chit_chat/screens/welcome_screen.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         ChatScreen.id: (context) => const ChatScreen(),
         LoginScreen.id: (context) => const LoginScreen(),
         RegistrationScreen.id: (context) => const RegistrationScreen(),
+        LoadingScreen.id: (context) => const LoadingScreen(),
       },
     );
   }

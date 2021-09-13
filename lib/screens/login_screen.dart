@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../constants.dart';
 import 'chat_screen.dart';
+import 'loading_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -18,6 +19,12 @@ class _LoginScreenState extends State<LoginScreen> {
   final _auth = FirebaseAuth.instance;
   late String email;
   late String password;
+
+  @override
+  void dispose() {
+    const LoadingScreen();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,11 +70,12 @@ class _LoginScreenState extends State<LoginScreen> {
               title: 'Log In',
               buttonColour: Colors.lightBlueAccent,
               onPressed: () async {
+                Navigator.pushNamed(context, LoadingScreen.id);
                 try {
                   final loginUser = await _auth.signInWithEmailAndPassword(
                       email: email, password: password);
                   if (loginUser != null) {
-                    Navigator.pushNamed(context, ChatScreen.id);
+                    Navigator.pushReplacementNamed(context, ChatScreen.id);
                   }
                 } catch (e) {
                   print(e);
